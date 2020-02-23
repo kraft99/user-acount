@@ -1,0 +1,30 @@
+{% extends 'account/_layout.html' %}
+{% load static from staticfiles %}
+{% load bootstrap4 %}
+
+    {% block css %}
+    .mv-down{
+    margin-top:6em;
+	}
+
+    {% endblock %}
+
+
+{% block content %}
+
+{% include 'partials/_message.html' %}
+ 
+<section class="container">
+  <section class="row mv-down">
+  	<section class="col-lg-6 offset-lg-3 shadow-sm" style="background: white">
+  				 <h4 class="text-center sign-in-h4 mt-3 mb-4">REMOVE ACCOUNT</h4>
+		          <form action="{% url 'account:remove' %}" method="POST" class="text-center pb-3">
+					{%csrf_token %}
+					<button class="btn btn-danger">Confirm</button>
+					<input type="hidden" name="token" value="{{token.token}}">
+				</form>
+  	</section>
+  </section>
+</section>
+
+{% endblock %}

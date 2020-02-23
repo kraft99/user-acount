@@ -1,0 +1,35 @@
+.mv-down{
+	margin-top: 6em;
+}
+
+.title-chart,.title-feeling{
+	color: #c7c5c5;
+    font-size: 17px;
+    font-family: monospace;
+}
+
+*{
+	text-decoration: none;
+    font-weight: 100;
+    color: #989898;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+
+.list-group-flush .list-group-item a{
+	text-decoration: none;
+    font-weight: 100;
+    color: #989898;
+    font-family: monospace;
+    font-size: 18px;
+}
+
+.list-group-flush .list-group-item .float-right{
+	text-decoration: none;
+    font-weight: 100;
+    color: #c7c7c7;
+    font-family: monospace;
+    font-style: italic;
+    font-size: 14px !important;
+}

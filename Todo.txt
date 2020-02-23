@@ -1,0 +1,47 @@
+NOTE : KEEP VIEW CLEAN AND LEAN
+
+
+#User model
+1. user model with phone number field (done)
+
+2. user model with ip field (done)
+
+3. user model with avatar & gravatar
+
+#Account
+1. user register
+	- validate username unique & banned (done)
+	- validate email unique & banned (done)
+	- validate phone number unique & banned (done)
+
+2. user login
+	- login with (username, email or phone number & password)
+	- login with (username or email & password) (done)
+	- login with (username & password) (done) 
+	- login with (email & password) (done)
+
+3. user logout
+	- Edit account
+
+4. password change
+
+5. password reset
+
+6. close account
+
+7. account activation
+	- generate & send token from forms.py (done)
+
+8. Delete users account if activation code has expired or 
+Allow them to send email used in activation to receive token by email
+
+9. social authentication (facebook,gmail,twitter,github & linkedlin)
+
+10. send token for changes on
+
+	- username
+	- email
+	- phone number
+
+Extend
+1. restrict account edit for 16 days.

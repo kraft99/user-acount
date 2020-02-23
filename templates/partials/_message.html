@@ -1,0 +1,14 @@
+<section class="container">
+  <section class="row" style="margin-top: 3.8em;">
+    <section class="col-lg-6 offset-lg-3 text-center">
+            {% if messages %}
+              {% for message in messages %}
+                  <div class="alert alert-{{ message.tags }} fade in">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    {{ message }}
+                  </div>        
+              {% endfor %}
+          {% endif %}
+    </section>
+  </section>
+</section>

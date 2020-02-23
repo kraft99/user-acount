@@ -1,0 +1,31 @@
+{% extends 'account/_layout.html' %}
+{% load static from staticfiles %}
+{% load gravatar %} <!-- Load Gravar tag -->
+
+    {% block css %}
+    .mv-down{
+    margin-top:6em;
+	}
+
+    {% endblock %}
+
+
+{% block content %}
+
+<section class="container">
+  <section class="row mv-down">
+  	<section class="col-lg-12 shadow-sm" style="background: white">
+  		<h3>Welcome {{ user.username }}</h3>
+  		<h3>({{ email }})</h3>
+      <section class="col-lg-12">
+        <p>Gravatar</p>
+        <img src="{% get_gravatar_url user.email size=200 %}" alt="{{user.username}} avatar pic">
+      </section>
+      <section class="col-lg-12">
+        <a class='btn btn-danger mt-3 mb-3 float-right' href="{% url 'account:delete-account' request.user.username %}">Delete account</a>
+      </section>
+  	</section>
+  </section>
+</section>
+
+{% endblock %}

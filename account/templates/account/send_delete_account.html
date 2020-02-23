@@ -1,0 +1,32 @@
+{% extends 'account/_layout.html' %}
+{% load static from staticfiles %}
+{% load bootstrap4 %}
+
+    {% block css %}
+    .mv-down{
+    margin-top:6em;
+	}
+
+    {% endblock %}
+
+
+{% block content %}
+
+{% include 'partials/_message.html' %}
+
+<section class="container">
+  <section class="row mv-down">
+  	<section class="col-lg-6 offset-lg-3 shadow-sm" style="background: white">
+  				 <h4 class="text-center sign-in-h4 mt-3 mb-4">Account remove</h4>
+		          <form method="POST" action="." method="POST" class="mb-2">
+		            {% bootstrap_form form %}
+		            {% csrf_token %}
+		            <input type="hidden" name="next" value="{{ next }}" />
+		            <button type="submit" class="btn btn-outline-primary login-btn">Send</button>
+		          </form>
+              <!-- {{request.hey}} -->
+  	</section>
+  </section>
+</section>
+
+{% endblock %}
